@@ -35,3 +35,18 @@ functional requisites
 - [ ] It should be possible to validate a user's check-in;
 - [ ] It should be possible to register a gym;
 
+Business Rules (BR)
+
+* [ ] A user must not be able to register with a duplicate email;
+* [ ] A user must not be able to perform two check-ins on the same day;
+* [ ] A user must not be able to check in if they are not within 100 meters of the gym;
+* [ ] A check-in can only be validated within 20 minutes after being created;
+* [ ] A check-in can only be validated by administrators;
+* [ ] A gym can only be registered by administrators;
+
+Non-Functional Requirements (NFR)
+
+* [ ] The user's password must be encrypted;
+* [ ] Application data must be persisted in a PostgreSQL database;
+* [ ] All data lists must be paginated with 20 items per page;
+* [ ] The user must be identified using a JWT (JSON Web Token);
