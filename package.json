@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
+    "migration": "tsx node_modules/.bin/migrate-mongo up",
+    "migration:down": "tsx node_modules/.bin/migrate-mongo down",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,6 +14,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "mongoose": "^9.5.0",
@@ -19,6 +22,9 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@types/express": "^5.0.6"
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "migrate-mongo": "^14.0.7",
+    "typescript": "^6.0.3"
   }
 }
